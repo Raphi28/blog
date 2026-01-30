@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+Detail - {{parent()}}
+{% endblock %}
+
+{% block body %}
+
+<h1>Détail de l'article</h1>
+
+<div class="card text-bg-dark">
+  <img src="{{articles[id].image}}" class="card-img" alt="{{articles[id].titre}}" style="height: 400px; object-fit: cover;">
+  <div class="card-img-overlay">
+    <h5 class="card-title">{{articles[id].titre}}</h5>
+    <p class="card-text">{{articles[id].contenu}}</p>
+    <p class="card-text bg-primary"><small>Auteur : {{articles[id].auteur}}</small></p>
+  </div>
+</div>
+
+{% endblock %}
